@@ -18,6 +18,11 @@ always @(*) begin
         default: RESULT=0;
     endcase
     COUT=0;
-    ZERO_FLAG=(COUT==0);
+    if (RESULT==0) begin
+        ZERO_FLAG=1'b1;
+    end
+    else begin
+        ZERO_FLAG=1'b0;
+    end
 end
 endmodule //Logic_Unit
