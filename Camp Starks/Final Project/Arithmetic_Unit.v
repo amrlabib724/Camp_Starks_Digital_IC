@@ -17,7 +17,7 @@ always @(*) begin
        3'b011 : {COUT,RESULT}= B-1;
         default: {COUT,RESULT}=0;
     endcase
-    if (COUT==0) begin
+    if (RESULT==0) begin
         ZERO_FLAG=1'b1;
     end
     else begin
